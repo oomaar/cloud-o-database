@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
   }
 
   html {
@@ -11,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: #111;
-    color: #333;
+    color: #555;
   }
 `;
