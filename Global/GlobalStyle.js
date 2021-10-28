@@ -16,4 +16,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #111;
     color: #555;
   }
+
+  h1,h2,h3,h4,h5,h6,p,a,div,span,button {
+    ::selection {
+      background: rgba(62, 6, 95, 1);
+      color: #fff;
+    }
+  }
 `;
