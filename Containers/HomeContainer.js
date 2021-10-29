@@ -4,7 +4,7 @@ import { NextHead } from "../Global";
 export const HomeContainer = () => {
     return (
         <div>
-            <NextHead title="Omar's Cloud" />
+            <NextHead title="Cloud-S | Landing Page" />
 
             <Hero />
         </div>
