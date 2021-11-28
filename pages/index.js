@@ -1,4 +1,2 @@
-import { HomeContainer } from "../Containers";
-
-const Home = () => <HomeContainer />;
+const Home = () => <h1>Hello world</h1>;
 export default Home;
