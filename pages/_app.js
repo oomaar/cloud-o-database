@@ -1,6 +1,10 @@
+import { Layout } from "../global";
+
 const App = ({ Component, pageProps }) => {
   return (
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 };
 
