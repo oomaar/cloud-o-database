@@ -3,29 +3,27 @@ import { createGlobalStyle } from 'styled-components';
 const hueColor = 240;
 
 export const theme = {
-    colors: {
-        primaryColor: `hsl(${hueColor}, 69%, 61%)`,
-        primaryColorAlt: `hsl(${hueColor}, 57%, 53%)`,
-        bodyColor: `hsl(${hueColor}, 28%, 13%)`,
-        titleColor: `hsl(${hueColor}, 8%, 95%)`,
-        textColor: `hsl(${hueColor}, 8%, 75%)`,
-        textColorLight: `hsl(${hueColor}, 8%, 65%)`,
-        inputColor: `hsl(${hueColor}, 29%, 16%)`,
-        containerColor: `hsl(${hueColor}, 29%, 16%)`,
-        scrollBarColor: `hsl(${hueColor}, 12%, 48%)`,
-        scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
-        buttonColor: ``,
-        linkColor: ``
-    },
-    fontSize: {
-        biggestFontSize: `5rem`,
-        bigFontSize: `3rem`,
-        mediumFontSize: `2rem`,
-        normalFontSize: `1.5rem`,
-        smallFontSize: `1.3rem`,
-        buttonFontSize: `1.25rem`
-    },
-    bold: `700`
+  colors: {
+    primaryColor: `hsl(${hueColor}, 69%, 61%)`,
+    primaryColorAlt: `hsl(${hueColor}, 57%, 53%)`,
+    bodyColor: `hsl(${hueColor}, 28%, 13%)`,
+    titleColor: `hsl(${hueColor}, 8%, 95%)`,
+    textColor: `hsl(${hueColor}, 8%, 75%)`,
+    textColorLight: `hsl(${hueColor}, 8%, 65%)`,
+    inputColor: `hsl(${hueColor}, 29%, 16%)`,
+    containerColor: `hsl(${hueColor}, 29%, 16%)`,
+    scrollBarColor: `hsl(${hueColor}, 12%, 48%)`,
+    scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
+  },
+  fontSize: {
+    biggestFontSize: `5rem`,
+    bigFontSize: `3rem`,
+    mediumFontSize: `2rem`,
+    normalFontSize: `1.5rem`,
+    smallFontSize: `1.3rem`,
+    buttonFontSize: `1.25rem`
+  },
+  bold: `700`
 };
 
 export const GlobalStyle = createGlobalStyle`
