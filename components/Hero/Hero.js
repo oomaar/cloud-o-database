@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { signIn, signOut } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
 import {
     HeroContainer,
     HeroNavbar,
@@ -9,6 +9,10 @@ import {
 } from "./styledHero";
 
 export const Hero = () => {
+    const [session, loading] = useSession();
+    console.log("🚀 ~ file: Hero.js ~ line 13 ~ Hero ~ loading", loading)
+    console.log("🚀 ~ file: Hero.js ~ line 13 ~ Hero ~ session", session)
+
     const handleSignIn = e => {
         e.preventDefault();
         signIn();
@@ -30,12 +34,21 @@ export const Hero = () => {
                         objectFit="contain"
                     />
                 </HeroNavbarLogo>
-                <Link href="/api/auth/signin">
-                    <HeroNavbarButton onClick={handleSignIn}>Log In</HeroNavbarButton>
-                </Link>
-                <Link href="/api/auth/signout">
-                    <HeroNavbarButton onClick={handleSignOut}>Log out</HeroNavbarButton>
-                </Link>
+                {
+                    (!loading && !session) && (
+                        <Link href="/api/auth/signin">
+                            <HeroNavbarButton onClick={handleSignIn}>Log In</HeroNavbarButton>
+                        </Link>
+                    )
+                }
+
+                {
+                    session && (
+                        <Link href="/api/auth/signout">
+                            <HeroNavbarButton onClick={handleSignOut}>Log out</HeroNavbarButton>
+                        </Link>
+                    )
+                }
             </HeroNavbar>
         </HeroContainer>
     );
