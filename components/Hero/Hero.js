@@ -5,13 +5,14 @@ import {
     HeroContainer,
     HeroNavbar,
     HeroNavbarLogo,
-    HeroNavbarButton,
+    HeroFeature,
+    HeroTitle,
+    HeroSubtitle,
+    HeroButton,
 } from "./styledHero";
 
 export const Hero = () => {
     const [session, loading] = useSession();
-    console.log("🚀 ~ file: Hero.js ~ line 13 ~ Hero ~ loading", loading)
-    console.log("🚀 ~ file: Hero.js ~ line 13 ~ Hero ~ session", session)
 
     const handleSignIn = e => {
         e.preventDefault();
@@ -26,18 +27,20 @@ export const Hero = () => {
     return (
         <HeroContainer>
             <HeroNavbar>
-                <HeroNavbarLogo>
-                    <Image
-                        src="/logo-white.png"
-                        width={100}
-                        height={100}
-                        objectFit="contain"
-                    />
-                </HeroNavbarLogo>
+                <Link href="/">
+                    <HeroNavbarLogo>
+                        <Image
+                            src="/logo-white.png"
+                            width={100}
+                            height={100}
+                            objectFit="contain"
+                        />
+                    </HeroNavbarLogo>
+                </Link>
                 {
                     (!loading && !session) && (
                         <Link href="/api/auth/signin">
-                            <HeroNavbarButton onClick={handleSignIn}>Log In</HeroNavbarButton>
+                            <HeroButton onClick={handleSignIn}>Log In</HeroButton>
                         </Link>
                     )
                 }
@@ -45,11 +48,18 @@ export const Hero = () => {
                 {
                     session && (
                         <Link href="/api/auth/signout">
-                            <HeroNavbarButton onClick={handleSignOut}>Log out</HeroNavbarButton>
+                            <HeroButton onClick={handleSignOut}>Log out</HeroButton>
                         </Link>
                     )
                 }
             </HeroNavbar>
+            <HeroFeature>
+                <HeroTitle>Welcome</HeroTitle>
+                <HeroSubtitle>Home to All Entertainment</HeroSubtitle>
+                <Link href="#">
+                    <HeroButton>Signup with Github</HeroButton>
+                </Link>
+            </HeroFeature>
         </HeroContainer>
     );
 };

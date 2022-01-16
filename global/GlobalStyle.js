@@ -16,7 +16,7 @@ export const theme = {
     scrollThumbColor: `hsl(${hueColor}, 12%, 36%)`,
   },
   fontSize: {
-    biggestFontSize: `5rem`,
+    biggestFontSize: `clamp(2.5rem, 4.2vw,5rem)`,
     bigFontSize: `3rem`,
     mediumFontSize: `2rem`,
     normalFontSize: `1.5rem`,
