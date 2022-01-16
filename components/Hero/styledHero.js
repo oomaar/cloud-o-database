@@ -34,7 +34,7 @@ export const HeroNavbarLogo = styled.div`
   }
 `;
 
-export const HeroNavbarButton = styled.button`
+export const HeroNavbarButton = styled.a`
   background-color: ${({ theme }) => theme.colors.primaryColor};
   color: ${({ theme }) => theme.colors.titleColor};
   border-radius: 0.7rem;
@@ -42,6 +42,7 @@ export const HeroNavbarButton = styled.button`
   font-weight: ${({ theme }) => theme.bold};
   padding: 0.5rem 1.5rem;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
 
   :hover {
     background-color: ${({ theme }) => theme.colors.primaryColorAlt};
