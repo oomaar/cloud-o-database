@@ -12,9 +12,11 @@ export const DashboardContainer = () => {
     };
 
     const dashboardData = data.map(card => (
-        <Card key={card.id} img={card.img}>
-            <CardTitle>{card.title}</CardTitle>
-        </Card>
+        <Link href={card.link} key={card.id}>
+            <Card img={card.img}>
+                <CardTitle>{card.title}</CardTitle>
+            </Card>
+        </Link>
     ));
 
     return (
