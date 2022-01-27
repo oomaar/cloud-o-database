@@ -1,28 +1,6 @@
 import { NextHead } from "../global";
-import { getSession, signIn } from "next-auth/client";
-import { useEffect, useState } from "react";
 
 const Dashboard = () => {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const securePage = async () => {
-            const session = await getSession();
-
-            if (!session) {
-                signIn();
-            } else {
-                setLoading(false);
-            };
-        };
-
-        securePage();
-    }, []);
-
-    if (loading) {
-        return <h2>better loading screen</h2>;
-    };
-
     return (
         <div>
             <NextHead title="Cloud- O | Dashboard" />
