@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import {
     HeroContainer,
     HeroNavbar,
@@ -11,6 +12,11 @@ import {
 } from "./styledHero";
 
 export const Hero = () => {
+    const handleSignIn = e => {
+        e.preventDefault();
+        signIn();
+    };
+
     return (
         <HeroContainer>
             <HeroNavbar>
@@ -24,21 +30,9 @@ export const Hero = () => {
                         />
                     </HeroNavbarLogo>
                 </Link>
-                {/* {
-                    (!loading && !session) && (
-                        <Link href="/api/auth/signin">
-                            <HeroButton onClick={handleSignIn}>Log In</HeroButton>
-                        </Link>
-                    )
-                }
-
-                {
-                    session && (
-                        <Link href="/api/auth/signout">
-                            <HeroButton onClick={handleSignOut}>Log out</HeroButton>
-                        </Link>
-                    )
-                } */}
+                <Link href="/api/auth/signin">
+                    <HeroButton onClick={handleSignIn}>Log In</HeroButton>
+                </Link>
             </HeroNavbar>
             <HeroFeature>
                 <HeroTitle>Welcome</HeroTitle>
