@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Courses",
+    "img": "/dashboard/courses.jpg",
+    "link": "/dashboard/courses"
+  },
+  {
+    "id": 2,
+    "title": "Games",
+    "img": "/dashboard/games.jpg",
+    "link": "/dashboard/games"
+  },
+  {
+    "id": 3,
+    "title": "Images",
+    "img": "/dashboard/images.jpg",
+    "link": "/dashboard/images"
+  },
+  {
+    "id": 4,
+    "title": "Movies",
+    "img": "/dashboard/movies.jpg",
+    "link": "/dashboard/movies"
+  },
+  {
+    "id": 5,
+    "title": "Music",
+    "img": "/dashboard/music.jpg",
+    "link": "/dashboard/music"
+  },
+  {
+    "id": 6,
+    "title": "Programs",
+    "img": "/dashboard/programs.jpg",
+    "link": "/dashboard/programs"
+  },
+  {
+    "id": 7,
+    "title": "VIP Data",
+    "img": "/dashboard/vip.jpg",
+    "link": "/dashboard/vip"
+  }
+]
