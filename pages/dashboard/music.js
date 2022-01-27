@@ -1,22 +1,20 @@
-import { NextHead } from "../../global";
 import { useSession } from "next-auth/react";
-import { DashboardContainer } from "../../containers";
 import { Hero } from "../../components";
+import { NextHead } from "../../global";
 
-const Dashboard = () => {
+const Music = () => {
     const { data: session, loading } = useSession();
 
     if (loading) return null;
 
     if (!loading && !session) return <Hero />;
-
     return (
         <div>
-            <NextHead title="Cloud- O | Dashboard" />
+            <NextHead title="Cloud-O | Music" />
 
-            <DashboardContainer />
+            <h1>Music</h1>
         </div>
     );
 };
 
-export default Dashboard;
+export default Music;
