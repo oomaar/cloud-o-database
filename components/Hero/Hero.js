@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import {
     HeroContainer,
     HeroNavbar,
@@ -12,6 +12,8 @@ import {
 } from "./styledHero";
 
 export const Hero = () => {
+    const { data: session } = useSession();
+
     const handleSignIn = e => {
         e.preventDefault();
         signIn();
@@ -37,9 +39,11 @@ export const Hero = () => {
             <HeroFeature>
                 <HeroTitle>Welcome</HeroTitle>
                 <HeroSubtitle>Home to All Entertainment</HeroSubtitle>
-                <Link href="#">
-                    <HeroButton>Signup with Github</HeroButton>
-                </Link>
+                {session && (
+                    <Link href="/dashboard">
+                        <HeroButton>Dashboard</HeroButton>
+                    </Link>
+                )}
             </HeroFeature>
         </HeroContainer>
     );
