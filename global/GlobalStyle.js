@@ -26,6 +26,8 @@ export const theme = {
   bold: `700`
 };
 
+export const transition = `all 0.5s ease-in`;
+
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
