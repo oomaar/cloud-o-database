@@ -39,11 +39,11 @@ export const Hero = () => {
             <HeroFeature>
                 <HeroTitle>Welcome</HeroTitle>
                 <HeroSubtitle>Home to All Entertainment</HeroSubtitle>
-                {session && (
+                {session ? (
                     <Link href="/dashboard">
                         <HeroButton>Dashboard</HeroButton>
                     </Link>
-                )}
+                ) : <></>}
             </HeroFeature>
         </HeroContainer>
     );
