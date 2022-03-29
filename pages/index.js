@@ -1,6 +1,8 @@
 import { Hero } from "../components";
 import { NextHead } from "../global";
 
+// source link
+// https://www.loginradius.com/blog/async/guest-post/nextjs-authentication-guide/
 // import { useEffect } from "react"
 // import { useRouter } from "next/router"
 // import authService from "auth-service" //imaginary auth service
